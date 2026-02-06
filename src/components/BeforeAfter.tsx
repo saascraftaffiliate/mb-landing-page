@@ -1,7 +1,6 @@
-import React from 'react';
 import { X, Check } from 'lucide-react';
 
-const BeforeAfter: React.FC = () => {
+const BeforeAfter = () => {
   const beforeItems = [
     'Waiting weeks for landing pages, site updates, or product UI tweaks',
     'Burning budget on traffic that doesn\'t turn into demos or trials',
@@ -19,14 +18,14 @@ const BeforeAfter: React.FC = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {/* Before */}
-          <div className="bg-red-50 rounded-3xl p-8 lg:p-10">
+          <div className="bg-red-50 rounded-3xl p-8 lg:p-10 border border-red-100">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
                 <X className="w-5 h-5 text-red-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900">Before working with us</h3>
+              <h3 className="text-xl font-bold text-[#293052]">Before working with us</h3>
             </div>
             <p className="text-gray-600 mb-6 text-sm">
               Most SaaS & tech Teams we meet are stuck here:
@@ -42,12 +41,12 @@ const BeforeAfter: React.FC = () => {
           </div>
 
           {/* After */}
-          <div className="bg-green-50 rounded-3xl p-8 lg:p-10">
+          <div className="bg-green-50 rounded-3xl p-8 lg:p-10 border border-green-100">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
                 <Check className="w-5 h-5 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900">After working with us</h3>
+              <h3 className="text-xl font-bold text-[#293052]">After working with us</h3>
             </div>
             <p className="text-gray-600 mb-6 text-sm">
               What it feels like with a single creative partner for copy, design, and dev:

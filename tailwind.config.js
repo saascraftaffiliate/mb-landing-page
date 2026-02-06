@@ -7,12 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#0A0A0A',
-        secondary: '#1A1A1A',
-        accent: '#6366F1',
+        primary: '#293052',
+        'primary-dark': '#1d1d1d',
+        accent: '#fbe64d',
+        muted: 'rgba(255, 255, 255, 0.64)',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+        mono: ['"Fragment Mono"', 'monospace'],
       },
     },
   },

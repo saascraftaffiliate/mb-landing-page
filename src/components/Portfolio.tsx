@@ -1,0 +1,47 @@
+const Portfolio = () => {
+  const projects = [
+    { name: 'Tradeify', title: 'Revamping Tradeify for the Next Generation of Traders', tags: ['Fintech', 'Prop Trading'] },
+    { name: 'Viral.app', title: 'Shaping Viral.app\'s Brand and Website With a Playful Identity', tags: ['Creator Marketing', 'Influencer Campaign'] },
+    { name: 'BlueAlpha', title: 'A Product Story Told Clearly', tags: ['Marketing Analytics', 'Data Intelligence'] },
+    { name: 'SPRX', title: 'We Helped SPRX Design Their Series B Pitch Suite After Their $12M Series A', tags: ['Tax', 'Cost Segregation'] },
+    { name: 'BranditScan', title: 'A Complete Brand Transformation for BranditScan', tags: ['Brand Protection', 'Privacy'] },
+    { name: 'You.com', title: 'Fueling You.com\'s Growth With Fast, High-Impact Designs', tags: ['AI Search Engine', 'Conversational AI'] },
+    { name: 'Kintsugi', title: 'Redefining Kintsugi\'s Digital Identity Following Their $18M Funding', tags: ['Tax Automation', 'Tax Compliance'] },
+    { name: 'Astra Security', title: 'New Website, New Funding: Astra\'s $2.7M Success Story', tags: ['Cybersecurity', 'Pentest'] },
+  ];
+
+  return (
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#293052] mb-16 text-center">
+          Selected Work
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {projects.map((project, index) => (
+            <div key={index} className="bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+              <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                <div className="text-center p-8">
+                  <div className="text-2xl font-bold text-[#293052] mb-2">{project.name}</div>
+                  <div className="text-sm text-gray-500">Project Image</div>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-[#293052] mb-3">{project.title}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag, tagIndex) => (
+                    <span key={tagIndex} className="text-xs px-3 py-1 bg-gray-100 text-gray-600 rounded-full">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Portfolio;

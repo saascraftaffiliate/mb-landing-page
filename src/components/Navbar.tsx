@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -13,12 +13,6 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { label: 'Copy', href: '#services' },
-    { label: 'Design', href: '#services' },
-    { label: 'Dev', href: '#services' },
-  ];
-
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -28,26 +22,26 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <span className="text-xl font-bold text-gray-900">Supafast</span>
+          <a href="#" className="text-xl font-bold text-[#293052]">
+            Supafast
           </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
-              >
-                {link.label}
-              </a>
-            ))}
+            <a href="#services" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+              Copy
+            </a>
+            <a href="#services" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+              Design
+            </a>
+            <a href="#services" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">
+              Dev
+            </a>
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="bg-gray-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
+            <button className="bg-[#293052] text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-[#1d1d1d] transition-colors">
               Book a call
             </button>
           </div>
@@ -58,9 +52,9 @@ const Navbar: React.FC = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-gray-900" />
+              <X className="w-6 h-6 text-[#293052]" />
             ) : (
-              <Menu className="w-6 h-6 text-gray-900" />
+              <Menu className="w-6 h-6 text-[#293052]" />
             )}
           </button>
         </div>
@@ -69,17 +63,10 @@ const Navbar: React.FC = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white border-t">
             <div className="px-4 py-4 space-y-3">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="block text-gray-600 hover:text-gray-900 py-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
-              <button className="w-full bg-gray-900 text-white px-5 py-3 rounded-full text-sm font-medium mt-4">
+              <a href="#services" className="block text-gray-600 py-2">Copy</a>
+              <a href="#services" className="block text-gray-600 py-2">Design</a>
+              <a href="#services" className="block text-gray-600 py-2">Dev</a>
+              <button className="w-full bg-[#293052] text-white px-5 py-3 rounded-full text-sm font-medium mt-4">
                 Book a call
               </button>
             </div>
